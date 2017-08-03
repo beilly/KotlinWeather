@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion compile_sdk
@@ -15,10 +15,35 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    dataBinding {
+        enabled = true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("weather.jks")
+            storePassword "shibenli"
+            keyAlias "kotlin"
+            keyPassword "kotlin"
+        }
+    }
+
     buildTypes {
+        String[] proguards = [getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro']
+
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            proguardFiles proguards
+        }
+
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            signingConfig signingConfigs.release
+            proguardFiles proguards
         }
     }
 }
@@ -34,4 +59,5 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     //rxdownload
     compile 'zlc.season:rxdownload2:2.0.4'
+    kapt 'com.android.databinding:compiler:2.3.3'
 }

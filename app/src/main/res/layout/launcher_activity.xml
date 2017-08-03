@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.benli.kotlinweather.main.launcher.viewmodel.LaunchViewModel"/>
+    </data>
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:flexDirection="column"
+        app:justifyContent="flex_end">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="center"
+            android:src="@{viewModel.launch.icon}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{viewModel.launch.name}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@{'v'+ viewModel.launch.version}"/>
+
+    </com.google.android.flexbox.FlexboxLayout>
+</layout>

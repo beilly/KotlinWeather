@@ -27,19 +27,13 @@ val optionsHigh = RequestOptions()
         .placeholder(R.drawable.ic_image_loading)
         .error(R.drawable.ic_empty_picture)
 
-fun display(context: Context, imageView: ImageView?, url: String) {
-    if (imageView == null) {
-        throw IllegalArgumentException("argument error")
-    }
+fun display(imageView: ImageView, context: Context = imageView.context, url: String?) {
     Glide.with(context).load(url)
             .apply(options)
             .into(imageView)
 }
 
-fun displayHigh(context: Context, imageView: ImageView?, url: String) {
-    if (imageView == null) {
-        throw IllegalArgumentException("argument error")
-    }
+fun displayHigh(imageView: ImageView, context: Context = imageView.context, url: String?) {
     Glide.with(context).asBitmap()
             .load(url)
             .apply(optionsHigh)

@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion compile_sdk
@@ -29,4 +29,9 @@ dependencies {
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:${support_version}"
     testImplementation 'junit:junit:4.12'
+    api project(":cmm")
+    compile 'com.amap.api:location:latest.integration'
+    //flexbox
+    compile 'com.google.android:flexbox:0.3.0'
+    kapt 'com.android.databinding:compiler:2.3.3'
 }

@@ -9,11 +9,12 @@ import android.util.DisplayMetrics
 class App : Application() {
     override fun onCreate() {
         super.onCreate()
+        app = this
         displayMetrics = resources.displayMetrics
     }
 
     companion object {
-        var app = this
+        lateinit var app : App
         lateinit var displayMetrics: DisplayMetrics
     }
 }
