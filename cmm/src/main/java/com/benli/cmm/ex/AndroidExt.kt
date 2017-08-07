@@ -3,6 +3,7 @@ package com.benli.cmm.ex
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
 import android.widget.Toast
@@ -17,16 +18,17 @@ fun Context.showToast(message: String) : Toast {
     var toast : Toast = Toast.makeText(this,message, Toast.LENGTH_SHORT)
     toast.setGravity(Gravity.CENTER,0,0)
     toast.show()
-    toast?.apply{
-
-    }
     return toast
 }
 
-inline fun <reified T: Activity> Activity.newIntent() {
+inline fun <reified T: Activity> Activity.newIntent(bundle: Bundle? = null) {
     val intent = Intent(this, T::class.java)
+    bundle?.let{
+        intent.putExtras(bundle)
+    }
     startActivity(intent)
 }
+
 
 /**
  * 统一的日志扩展
