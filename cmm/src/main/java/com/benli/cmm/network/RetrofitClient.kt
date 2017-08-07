@@ -2,6 +2,7 @@ package com.benli.cmm.network
 
 import android.content.Context
 import android.util.Log
+import com.benli.cmm.network.converter.StringConverterFactory
 import java.io.File
 import okhttp3.Cache
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -21,10 +22,11 @@ class RetrofitClient private constructor(context: Context,baseUrl:String){
     var httpCacheDirectory : File? = null
     val mContext : Context = context
     var cache : Cache? = null
-    var okHttpClient : OkHttpClient? = null
-    var retrofit : Retrofit? = null
+    var okHttpClient : OkHttpClient
+    var retrofit : Retrofit
     val DEFAULT_TIMEOUT : Long = 20
     val url = baseUrl
+
     init {
         //缓存地址
         if (httpCacheDirectory == null) {
@@ -58,16 +60,15 @@ class RetrofitClient private constructor(context: Context,baseUrl:String){
     }
     companion object{
         @Volatile
-        var instance: RetrofitClient? = null
+        private var instance: RetrofitClient? = null
 
         fun getInstance(context: Context,baseUrl: String) : RetrofitClient {
-            if (instance == null) {
-                synchronized(RetrofitClient::class) {
-                    if (instance == null) {
-                        instance = RetrofitClient(context,baseUrl)
-                    }
+            synchronized(RetrofitClient::class) {
+                if (instance == null) {
+                    instance = RetrofitClient(context.applicationContext, baseUrl)
                 }
             }
+
             return instance!!
         }
 
@@ -75,11 +76,11 @@ class RetrofitClient private constructor(context: Context,baseUrl:String){
 
     }
 
-    fun <T> create(service: Class<T>?): T? {
+    fun <T> create(service: Class<T>?): T {
         if (service == null) {
             throw RuntimeException("Api service is null!")
         }
-        return retrofit?.create(service)
+        return retrofit.create(service)
     }
 
 
