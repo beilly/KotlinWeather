@@ -34,16 +34,16 @@ android {
     buildTypes {
         String[] proguards = [getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro']
 
-        release {
+        debug {
             minifyEnabled false
             signingConfig signingConfigs.release
             proguardFiles proguards
         }
 
         release {
-            minifyEnabled true
+            minifyEnabled false
             zipAlignEnabled true
-            shrinkResources true
+            shrinkResources false
             signingConfig signingConfigs.release
             proguardFiles proguards
         }
