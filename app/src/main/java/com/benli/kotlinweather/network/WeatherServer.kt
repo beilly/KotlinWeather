@@ -23,7 +23,7 @@ interface WeatherServer {
      */
     @GET("forecast")
     fun get5Day(@Query("id") id: String, @Query("appid") appid: String = BuildConfig.APPID)
-            : Observable<JsonObject>
+            : Observable<WeatherData>
 
     /**
      * 根据经纬度来获取天气

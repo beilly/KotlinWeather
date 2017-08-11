@@ -1,5 +1,6 @@
 package com.benli.common.base
 
+import com.benli.cmm.ex.LOG_D
 import com.benli.cmm.viewmodel.ViewModel
 
 /**
@@ -8,6 +9,6 @@ import com.benli.cmm.viewmodel.ViewModel
 
 open class BaseViewModel() : ViewModel {
     override fun destroy() {
-
+        LOG_D(this)
     }
 }

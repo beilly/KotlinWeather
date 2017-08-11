@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">KotlinWeather</string>
-    <string name="title_activity_weather">最新的天气</string>
+    <string name="title_activity_weather">最新天气</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 

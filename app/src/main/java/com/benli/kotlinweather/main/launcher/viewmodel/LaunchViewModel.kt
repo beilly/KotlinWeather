@@ -18,8 +18,4 @@ class LaunchViewModel(var context: Context): BaseViewModel() {
         launch.icon = R.mipmap.ic_launcher
         launch.name = context.getString(R.string.app_name)
     }
-
-    override fun destroy() {
-        LOG_D(this)
-    }
 }
