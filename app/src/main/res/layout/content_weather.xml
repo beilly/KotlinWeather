@@ -23,24 +23,18 @@
 
             <TextView
                 android:id="@+id/tvLocation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
+                style="@style/weather_now"
                 android:text='@{weatherVM.hasError ? "": weatherVM.weather.get().lcation}' />
 
             <TextView
                 android:id="@+id/tvIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
+                style="@style/weather_now"
                 android:text='@{weatherVM.hasError ? "": weatherVM.weather.get().forecasts[0].iconText}' />
 
 
             <TextView
                 android:id="@+id/tvTemperature"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
+                style="@style/weather_now"
                 android:text='@{weatherVM.hasError ? "": weatherVM.weather.get().forecasts[0].temperature}' />
 
         </LinearLayout>
