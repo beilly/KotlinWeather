@@ -1,10 +1,6 @@
-package com.tt.lvruheng.eyepetizer.utils
+package com.benli.cmm.utils
 
-import android.R.id.edit
 import android.content.Context
-import android.support.annotation.NonNull
-import java.util.Collections.emptySet
-import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 import java.util.*
 
@@ -200,7 +196,7 @@ class SPUtils private constructor(context: Context,spName: String) {
 
     companion object {
 
-        private val sSPMap = HashMap<String,SPUtils>()
+        private val sSPMap = HashMap<String, SPUtils>()
 
         /**
          * 获取SP实例

@@ -5,7 +5,7 @@ import com.amap.api.location.AMapLocationClientOption
 import com.amap.api.location.AMapLocationListener
 
 import android.content.Context
-import com.tt.lvruheng.eyepetizer.globle.App
+import com.benli.cmm.globle.App
 
 /**
  * @author baidu

@@ -4,7 +4,7 @@ import android.databinding.BindingAdapter
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.widget.ImageView
-import com.tt.lvruheng.eyepetizer.utils.display
+import com.benli.cmm.utils.display
 
 
 /**

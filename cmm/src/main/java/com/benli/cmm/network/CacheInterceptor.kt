@@ -1,8 +1,8 @@
-package com.tt.lvruheng.eyepetizer.network
+package com.benli.cmm.network
 
 import android.content.Context
 import android.util.Log
-import com.tt.lvruheng.eyepetizer.utils.NetworkUtils
+import com.benli.cmm.utils.NetworkUtils
 import okhttp3.Interceptor
 import okhttp3.Response
 import okhttp3.CacheControl

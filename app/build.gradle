@@ -24,7 +24,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("weather.jks")
+            storeFile file("../weather.jks")
             storePassword "shibenli"
             keyAlias "kotlin"
             keyPassword "kotlin"

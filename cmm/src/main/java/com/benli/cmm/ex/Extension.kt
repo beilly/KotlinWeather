@@ -3,7 +3,7 @@ package com.benli.cmm.ex
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
-import com.tt.lvruheng.eyepetizer.globle.App
+import com.benli.cmm.globle.App
 
 /**
  * Created by lvruheng on 2017/7/2.

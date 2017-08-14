@@ -1,4 +1,4 @@
-package com.tt.lvruheng.eyepetizer.globle
+package com.benli.cmm.globle
 
 import android.app.Application
 import android.util.DisplayMetrics
@@ -6,15 +6,17 @@ import android.util.DisplayMetrics
 /**
  * Created by shibenli on 2017/7/31.
  */
-class App : Application() {
+open class App : Application() {
     override fun onCreate() {
         super.onCreate()
         app = this
         displayMetrics = resources.displayMetrics
     }
 
-    companion object {
-        lateinit var app : App
-        lateinit var displayMetrics: DisplayMetrics
-    }
+    companion object: CompanionObj()
+}
+
+open class CompanionObj{
+    open lateinit var app : App
+    open lateinit var displayMetrics: DisplayMetrics
 }

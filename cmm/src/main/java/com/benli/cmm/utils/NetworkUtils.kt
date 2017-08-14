@@ -1,4 +1,4 @@
-package com.tt.lvruheng.eyepetizer.utils
+package com.benli.cmm.utils
 
 import android.content.Context
 import android.net.ConnectivityManager
