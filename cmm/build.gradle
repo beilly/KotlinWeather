@@ -13,6 +13,8 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+
+        multiDexEnabled true
     }
 
     dataBinding {
@@ -60,5 +62,7 @@ dependencies {
 
     kapt 'com.android.databinding:compiler:2.3.3'
     compile 'com.umeng.analytics:analytics:5.6.1'
+    compile 'com.android.support:multidex:1.0.1'
+
     compile 'com.github.vcredit-zj:commons-langa:v3.5-1'
 }
