@@ -5,3 +5,5 @@
 [![GitHubLicense](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://raw.githubusercontent.com/shibenli/KotlinWeather/master/LICENSE)
 
 基于https://github.com/JakeLin/SwiftWeather 的原型图的Kotlin版本
+
+[X] 
