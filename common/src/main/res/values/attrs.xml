@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ForecastView">
+        <attr name="fcv_time" format="string"/>
+        <attr name="fcv_icon" format="string"/>
+        <attr name="fcv_temperature" format="string"/>
+    </declare-styleable>
+</resources>

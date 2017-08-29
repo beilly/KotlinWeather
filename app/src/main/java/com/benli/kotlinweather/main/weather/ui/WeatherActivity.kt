@@ -14,7 +14,7 @@ class WeatherActivity : CMActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        weatherBind = DataBindingUtil.setContentView<ActivityWeatherBinding>(this, R.layout.activity_weather)
+        weatherBind = DataBindingUtil.setContentView(this, R.layout.activity_weather)
         weatherBind.contentWeather.tvIcon.typeface = App.iconTypeFace
         weatherBind.contentWeather.tvTemperature.typeface = App.iconTypeFace
         weatherBind.weatherVM = WeatherViewModel(this)
