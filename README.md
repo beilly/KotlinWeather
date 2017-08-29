@@ -20,6 +20,9 @@
 ![pic1](pic/Screenshot_2017-08-29-15-05-30-818_com.benli.kotlinweather.png)
 
 # Todo
+
 -[x] 天气获取
+
 -[x] 当前天气显示
+
 -[ ] 分时天气显示 
